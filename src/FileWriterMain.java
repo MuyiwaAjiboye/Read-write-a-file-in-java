@@ -55,16 +55,14 @@ public class FileWriterMain {
         try {
             File myFile = new File("test.txt");
             Scanner myReader = new Scanner(myFile);
-            String dataInFile = myReader.nextLine();
 
             while (myReader.hasNext()) {
+                String dataInFile = myReader.nextLine();
                 System.out.println(dataInFile);
 
             }
             myReader.close();
-        }
-
-        catch (FileNotFoundException fileNotFoundException) {
+        } catch (FileNotFoundException fileNotFoundException) {
             System.out.println("File does not exist");
         }
 
